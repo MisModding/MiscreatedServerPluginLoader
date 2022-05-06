@@ -1,12 +1,13 @@
-# PackageMiscreatedModRepo
+# MiscreatedServerPluginLoader
 
-Template Repo
+This mod loads unpacked local Lua Scripts as `Plugins` on a Miscreated Server, used mainly for development. but also allows Servers to load
+server side code easily. for implementation of additional features/system without using the steam workshop.
+> NOTE: remember. these files do not exist on the client thus have no access to client side functionality (though you can use RMI)
 
-Contains GitHub Actions that Package a Repo containing a miscreated Mod to a pak file and attaches it for each new release
+Features:
+- Load/Unload/Reload `Plugins` from a configurable Plugin directory
+- Global and Per-Plugin Configuration
+- AutoLoad and Error Handling Functionality
+- Plugins can depend on other Plugins
 
-NOTE: your mods files must be inside the Source/GameSDK dir
-(also contains basic github issue templates, just remove these if you dont need them)
-
-the resulting filenames are based on the repo name, so a for a  repo called: MyCoolMod
-everytime you create and publish a new release, it will have: MyCoolMod-editor-build.pak & MyCoolMod-workshop-build.pak automatically
-attached to your release after a few moments.
+Take a look in the MiscreatedServer Folder for a Simple Example Plugin
